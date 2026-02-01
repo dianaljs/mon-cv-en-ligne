@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base */
+body {
+    font-family: 'Raleway', Arial, sans-serif; 
+    font-size: 1rem; 
+    line-height: 1.6;
+    color: #333333; 
+    background-color: #f5f5f5; 
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+/* Conteneur principal */
+.cv-container {
+    width: 1160px; 
+    margin: 0 auto; 
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+}
+
+/* Header */
+.header {
+    background-color: #17abb3;
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Photo de profil */
+.profile-photo {
+    flex-shrink: 0; 
+}
+
+.profile-photo a {
+    display: block;
+    cursor: zoom-in; 
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; 
+    border: 5px solid #ffffff; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
+}
+
+.profile-photo a:hover img {
+    transform: scale(1.05);
+}
+
+.header-info {
+    flex: 1; 
+    color: #ffffff;
+    text-align: center;
+}
+
+.header-info h1 {
+    font-size: 3rem; 
+    font-weight: 700; 
+    margin-bottom: 0.5rem;
+}
+
+.header-info h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+/* Infos de contact */
+.contact-info {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.contact-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-item .icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); 
+}
+
+.contact-item a,
+.contact-item span {
+    transition: opacity 0.3s ease;
+}
+
+.contact-item a:hover {
+    opacity: 0.8; 
+}
+
+/* Contenu principal */
+.main-content {
+    display: flex; 
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #e3e3e3; 
+    width: 340px; 
+    padding: 2rem 2rem;
+    flex-shrink: 0; 
+}
+
+.sidebar .section {
+    margin-bottom: 2.5rem; 
+}
+
+.sidebar h3 {
+    color: #17abb3;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+/* Compétences */
+.competence {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.competence span {
+    font-weight: 700;
+}
+
+.stars {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.star {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.star::before {
+    content: "☆";
+    color: #17abb3;
+    font-size: 18px;
+}
+
+.star.filled::before {
+    content: "★";
+    color: #17abb3;
+}
+
+/* Langues */
+.langue {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.langue-nom {
+    font-weight: 700;
+}
+
+.langue-niveau {
+    color: #333333;
+    font-style: italic;
+}
+
+/* Hobbies */
+.qualites-list,
+.interets-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.qualites-list li,
+.interets-list li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    position: relative;
+    color: #333333;
+}
+
+.qualites-list li::before,
+.interets-list li::before {
+    content: "■";
+    color: #17abb3;
+    position: absolute;
+    left: 0;
+}
+
+/* Section principale */
+.main-section {
+    flex: 1; 
+    padding: 2rem 3rem;
+}
+
+.main-section .section {
+    margin-bottom: 2.5rem;
+}
+
+.main-section h3 {
+    color: #17abb3;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e3e3e3; 
+}
+
+/* Profil */
+.profil-text {
+    text-indent: 2rem; 
+    text-align: justify; 
+    margin-bottom: 1rem;
+}
+
+.main-section p {
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Formations, Stages, Expériences professionnelles */
+.timeline-item {
+    display: flex;
+    justify-content: space-between; 
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 0.8rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease; 
+}
+
+.timeline-item:hover {
+    background-color: #e3e3e3;
+    border-left-color: #17abb3; 
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    color: #333333;
+}
+
+.timeline-content .subtitle {
+    font-size: 0.95rem;
+    color: #333333;
+    font-style: italic;
+    text-align: left;
+}
+
+.timeline-date {
+    color: #17abb3;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap; 
+    flex-shrink: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #17abb3; 
+    padding: 2rem 3rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Réseaux sociaux */
+.social-links {
+    display: flex;
+    justify-content: center; 
+    gap: 2rem; 
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    display: inline-block;
+    transition: opacity 0.3s ease; 
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1);
+}
+
+/* Mise à jour */
+.update-date {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media screen and (max-width: 1200px) {
+    .cv-container {
+        width: 100%;
+        max-width: 1160px;
+    }
+}
